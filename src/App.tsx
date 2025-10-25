@@ -3,6 +3,8 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Projects from './pages/Projects'
+import Socials from './components/sections/Socials'
+import LeftBlock from './components/sections/LeftBlock'
 
 function App() {
 
@@ -14,6 +16,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path='/projects' element={<Projects />} />
         <Route path="*" element={<div>404 Not Found</div>} />
+        <Route path="/test" element={<LeftBlock />} />
       </Routes>
     </BrowserRouter>
   )
