@@ -3,11 +3,17 @@ import RightBlock from "./sections/RightBlock"
 
 function Layout() {
   return (
-    <div className='flex border-1 rounded-3xl flex-grow'>
-      <div className="flex h-full rounded-3xl w-full">
-        <LeftBlock />
-        <RightBlock />
+    <div className='flex rounded-3xl flex-grow'>
+      <div className="flex flex-1/4 rounded-3xl w-full gap-4">
+
+        <div className="flex-[1]">
+          <LeftBlock />
+        </div>
+        <div className="flex-[1]">
+          <RightBlock />
+        </div>
       </div>
+
     </div>
   )
 }

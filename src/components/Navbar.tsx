@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 function Navbar() {
   return (
     <div className='bg-[#D4C7B4] h-28 p-4 rounded-3xl flex justify-between text-[#000000] items-center'>
-        <div className='px-8 text-4xl'>
+        <div className='px-8 text-4xl font-kalnia text-[#1d1d1d]'>
             Semih YUCEKAN
         </div>
         <div className='px-24 flex gap-14 text-sm uppercase'>
