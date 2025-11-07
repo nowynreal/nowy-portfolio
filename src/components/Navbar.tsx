@@ -6,7 +6,7 @@ function Navbar() {
         <div className='px-8 text-4xl font-kalnia text-[#1d1d1d]'>
             Semih YUCEKAN
         </div>
-        <div className='px-24 flex gap-14 text-sm uppercase'>
+        <div className='px-24 flex gap-14 text-md uppercase poppins-bold'>
             <Link to="/projects">Projects</Link>
             <Link to="/about">About</Link>
             <Link to="/contact">Contact</Link>
