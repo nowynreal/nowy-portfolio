@@ -1,6 +1,4 @@
-import React from 'react'
-
-function SecondRow() {
+ function SecondRow() {
   return (
     <div className='w-full flex flex-1/2'>
         <div className=' relative bg-[#D4C7B4] flex-2/4 rounded-b-3xl mb-4'>

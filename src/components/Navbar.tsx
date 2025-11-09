@@ -8,7 +8,7 @@ function Navbar() {
         </div>
         <div className='px-24 flex gap-14 text-md uppercase poppins-bold'>
             <Link to="/projects">Projects</Link>
-            <Link to="/about">About</Link>
+            <Link to="/about" >About</Link>
             <Link to="/contact">Contact</Link>
         </div>
     </div>
