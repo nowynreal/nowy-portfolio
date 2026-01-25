@@ -1,9 +1,9 @@
-import FirstCol from "../col/FirstCol"
-import SecondCol from "../col/SecondCol"
+import FirstCol from "../col/FirstCol";
+import SecondCol from "../col/SecondCol";
 
 function RightBlock() {
   return (
-    <div className='h-full flex gap-4'>
+    <div className="h-full flex gap-4">
       <div className="flex-[4]">
         <FirstCol />
       </div>
@@ -11,7 +11,7 @@ function RightBlock() {
         <SecondCol />
       </div>
     </div>
-  )
+  );
 }
 
-export default RightBlock
+export default RightBlock;
