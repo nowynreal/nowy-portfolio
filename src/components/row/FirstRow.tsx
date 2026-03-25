@@ -1,8 +1,8 @@
 function FirstRow() {
   return (
-    <div className="w-full flex flex-col md:flex-row gap-4">
-      <div className="bg-[#D4C7B4] md:flex-[2] rounded-r-3xl rounded-tl-3xl min-h-[140px]" />
-      <div className="bg-[#4B4A45] md:flex-[1] rounded-3xl min-h-[140px]">
+    <div className="flex w-full flex-[1] gap-4 min-h-0">
+      <div className="flex-[2] rounded-r-3xl rounded-tl-3xl bg-[#D4C7B4] min-h-[120px] sm:min-h-[140px]" />
+      <div className="flex-[1] rounded-3xl bg-[#4B4A45] min-h-[120px] sm:min-h-[140px]">
         <p className="p-4 font-kalnia text-2xl text-[#D4C7B4]">Skills</p>
       </div>
     </div>

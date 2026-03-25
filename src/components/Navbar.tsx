@@ -58,8 +58,14 @@ function Navbar() {
       </div>
 
       {/* Mobile dropdown */}
-      {open && (
-        <nav className="md:hidden mt-3 bg-[#D4C7B4] rounded-3xl p-4 border border-black/10">
+      <div
+        className={`md:hidden mt-3 overflow-hidden transition-all duration-1000 ease-out ${
+          open
+            ? "max-h-80 translate-y-0 opacity-100"
+            : "pointer-events-none -translate-y-2 max-h-0 opacity-0"
+        }`}
+      >
+        <nav className="rounded-3xl border border-black/10 bg-[#D4C7B4] p-4">
           <div className="flex flex-col gap-3 text-sm uppercase poppins-bold">
             <Link
               to="/projects"
@@ -84,7 +90,7 @@ function Navbar() {
             </Link>
           </div>
         </nav>
-      )}
+      </div>
     </header>
   );
 }

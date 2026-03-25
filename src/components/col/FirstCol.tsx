@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 
 function FirstCol() {
   return (
-    <div className="flex flex-col flex-1/3 gap-4 h-full rounded-3xl ">
-      <div className="bg-stone-300 rounded-3xl p-4 flex-[2] flex justify-around items-center">
+    <div className="flex h-full min-h-0 flex-col gap-3 rounded-3xl sm:gap-4">
+      <div className="flex min-h-[180px] flex-[2] items-center justify-around rounded-3xl bg-stone-300 p-3 sm:p-4">
         <div className="-skew-5">image here</div>
       </div>
       <Link
         to="/about"
-        className="bg-[#D4C7B4] rounded-3xl p-4 flex-[1] flex justify-around items-center text-[#1d1d1d] text-2xl font-kalnia"
+        className="flex min-h-[110px] flex-[1] items-center justify-around rounded-3xl bg-[#D4C7B4] p-3 text-center text-xl font-kalnia text-[#1d1d1d] sm:p-4 sm:text-2xl"
       >
         About Me
       </Link>

@@ -3,14 +3,14 @@ import RightBlock from "./sections/RightBlock";
 
 function Layout() {
   return (
-    <div className="flex rounded-3xl flex-grow">
-      <div className="flex flex-1/4 rounded-3xl w-full gap-4">
-        <div className="flex-[1]">
+    <div className="flex flex-1 min-h-0 rounded-3xl">
+      <div className="flex w-full min-h-0 flex-col gap-3 rounded-3xl sm:gap-4 lg:flex-row lg:items-stretch">
+        <section className="min-h-[calc(100svh-8rem)] sm:min-h-[calc(100svh-8.75rem)] lg:min-h-0 lg:flex-1 lg:overflow-hidden">
           <LeftBlock />
-        </div>
-        <div className="flex-[1]">
+        </section>
+        <section className="min-h-[calc(100svh-8rem)] sm:min-h-[calc(100svh-8.75rem)] lg:min-h-0 lg:flex-1 lg:overflow-hidden">
           <RightBlock />
-        </div>
+        </section>
       </div>
     </div>
   );

@@ -4,12 +4,12 @@ import Workingon from "../Workingon";
 
 function SecondCol() {
   return (
-    <div className="flex flex-col w-full h-full gap-4">
-      <div className="flex-[2] bg-[#D4C7B4] p-4 rounded-3xl">
+    <div className="flex h-full min-h-0 w-full flex-col gap-3 sm:gap-4">
+      <div className="flex-[2] min-h-0 rounded-3xl bg-[#D4C7B4] p-3 sm:p-4 lg:flex-[3]">
         <div className="flex gap-2 font-kalnia text-3xl"></div>
         <Workingon />
       </div>
-      <div className="flex-[1] bg-[#D4C7B4] rounded-3xl flex items-center justify-evenly text-4xl">
+      <div className="flex min-h-[66px] flex-[1] items-center justify-evenly rounded-3xl bg-[#D4C7B4] text-3xl sm:text-4xl lg:min-h-[48px] lg:flex-[0.36] lg:text-4xl py-2">
         <Link target="_blank" to="https://github.com/nowynreal">
           {" "}
           <FaGithub />{" "}

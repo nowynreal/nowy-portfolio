@@ -1,14 +1,19 @@
+import { Link } from "react-router-dom";
+
 function SecondRow() {
   return (
-    <div className="w-full flex flex-1/2">
-      <div className=" relative bg-[#D4C7B4] flex-2/4 rounded-b-3xl mb-4">
-        <div className="absolute -right-5 top-0 w-5 h-5 rounded-tl-[28px] bg-[#1d1d1d] z-[1] pointer-events-none" />
-        <div className="absolute -right-5 top-0 w-5 h-5 bg-[#D4C7B4] pointer-events-none" />
+    <div className="flex w-full flex-[2] min-h-[220px] gap-4 lg:min-h-0 lg:gap-0">
+      <div className="relative flex-[1] bg-[#D4C7B4] lg:mb-4 lg:rounded-b-3xl lg:rounded-tl-none">
+        <div className="pointer-events-none absolute -right-5 top-0 z-[1] hidden h-5 w-5 rounded-tl-[28px] bg-[#1d1d1d] lg:block" />
+        <div className="pointer-events-none absolute -right-5 top-0 hidden h-5 w-5 bg-[#D4C7B4] lg:block" />
       </div>
-      <div className="relative bg-[#4B4A45] flex-2/4 m-4 mb-0 mr-0 rounded-3xl rounded-b-none">
-        <div className="absolute -left-5 bottom-0 w-5 h-5 rounded-br-[28px] bg-[#1d1d1d] z-[1] pointer-events-none" />
-        <div className="absolute -left-5 bottom-0 w-5 h-5 bg-[#4B4A45] pointer-events-none" />
-      </div>
+      <Link
+        to="/projects"
+        className="relative flex-[1] rounded-3xl bg-[#4B4A45] transition lg:m-4 lg:mb-0 lg:mr-0 lg:rounded-3xl lg:rounded-b-none"
+      >
+        <div className="pointer-events-none absolute -left-5 bottom-0 hidden h-5 w-5 bg-[#4B4A45] lg:block" />
+        <div className="pointer-events-none absolute -left-5 bottom-0 z-[1] hidden h-5 w-5 rounded-br-[28px] bg-[#1d1d1d] lg:block" />
+      </Link>
     </div>
   );
 }

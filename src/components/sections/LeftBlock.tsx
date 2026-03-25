@@ -4,7 +4,7 @@ import ThirdRow from "../row/ThirdRow";
 
 function LeftBlock() {
   return (
-    <div className="h-full w-full flex flex-col rounded-3xl">
+    <div className="flex h-full w-full min-h-0 flex-col gap-4 rounded-3xl lg:gap-0">
       <FirstRow />
       <SecondRow />
       <ThirdRow />

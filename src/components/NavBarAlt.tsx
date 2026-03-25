@@ -73,8 +73,10 @@ function Navbar() {
 
       {/* Mobile Dropdown */}
       <div
-        className={`md:hidden mx-auto max-w-6xl px-4 transition ${
-          open ? "block" : "hidden"
+        className={`md:hidden mx-auto max-w-6xl overflow-hidden px-4 transition-all duration-1000 ease-out ${
+          open
+            ? "max-h-96 translate-y-0 opacity-100"
+            : "pointer-events-none -translate-y-2 max-h-0 opacity-0"
         }`}
       >
         <nav className="mt-2 rounded-3xl border border-white/10 bg-gradient-to-tr from-[#1d1d1d80] via-[#00000030] to-[#1d1d1d80] backdrop-blur-md p-3 flex flex-col gap-2">
