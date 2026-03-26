@@ -3,15 +3,46 @@ import Footer from "../components/Footer";
 import about_me_bg from "../assets/about_me_bg.png";
 import { useState, useEffect } from "react";
 
+const ROTATING_ROLES = [
+  "developer.",
+  "designer.",
+  "leader.",
+  "coder.",
+  "builder.",
+  "problem solver.",
+];
+
 function About() {
   const [activeSection, setActiveSection] = useState("intro");
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [isRoleVisible, setIsRoleVisible] = useState(true);
+
+  useEffect(() => {
+    let switchTimeout: ReturnType<typeof setTimeout> | undefined;
+
+    const rotateInterval = setInterval(() => {
+      setIsRoleVisible(false);
+
+      switchTimeout = setTimeout(() => {
+        setRoleIndex((prev) => (prev + 1) % ROTATING_ROLES.length);
+        setIsRoleVisible(true);
+      }, 180);
+    }, 2200);
+
+    return () => {
+      clearInterval(rotateInterval);
+      if (switchTimeout) {
+        clearTimeout(switchTimeout);
+      }
+    };
+  }, []);
 
   const sections = [
     { id: "intro", label: "About Me" },
     { id: "experience", label: "Experience" },
     { id: "tech-stack", label: "Tech Stack" },
-    { id: "what-sets-apart", label: "What Sets Me Apart" },
+    // { id: "what-sets-apart", label: "What Sets Me Apart" },
     { id: "achievements", label: "Awards" },
   ];
 
@@ -282,14 +313,23 @@ function About() {
               About Me
             </p>
             <h1 className="mt-6 font-kalnia text-5xl leading-tight text-[#efe4d3] lg:text-6xl xl:text-7xl">
-              Curious
+              Student, developer,
               <br />
               <span className="text-[#D4C7B4]">builder.</span>
             </h1>
             <p className="mt-6 text-sm leading-8 text-[#f1e8d9]/85 poppins-regular md:text-base">
-              I'm Semih—a developer & CS student who builds products that don't
-              just work, but <em>feel right</em>. Product thinking meets clean
-              code.
+              I'm Semih. A Computer Science student @ Middle Tennessee State
+              University and a improving <br />
+              <span className="poppins-bold">• Building as a </span>
+              <span
+                className={`inline-block min-w-[12ch] italic text-[#D4C7B4] transition-all duration-200 ${
+                  isRoleVisible
+                    ? "translate-y-0 opacity-100"
+                    : "-translate-y-1 opacity-0"
+                }`}
+              >
+                {ROTATING_ROLES[roleIndex]}
+              </span>
             </p>
             <div className="mt-8 flex gap-3">
               <a
@@ -308,28 +348,37 @@ function About() {
           </div>
 
           {/* Right: Key Stats (Bento) */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="rounded-3xl border border-[#D4C7B4]/20 bg-gradient-to-br from-[#D4C7B4]/14 to-[#1d1d1d]/80 p-6 backdrop-blur-sm md:col-span-2">
+          <div className="flex flex-col gap-4">
+            <div className="rounded-3xl border border-[#D4C7B4]/20 bg-gradient-to-br from-[#D4C7B4]/14 to-[#1d1d1d]/80 p-6 backdrop-blur-sm">
               <p className="text-xs uppercase tracking-[0.14em] text-[#D4C7B4]/80 poppins-semibold">
-                Currently
+                README.md
               </p>
-              <p className="mt-3 text-lg leading-6 text-[#f7f2e9] poppins-regular">
-                Building digital library tools at{" "}
-                <span className="font-kalnia text-[#D4C7B4]">BERC</span>,
-                shipping fast, learning faster.
+              <p className="mt-3 text-sm leading-6 text-[#f7f2e9] poppins-regular">
+                I’ve had the chance to explore different places and experiences,
+                and that shaped a strong personal background and mindset. I’m
+                naturally curious. Someone who likes to explore, stay busy, and
+                keep learning and improving in everything I do. I’ve always had
+                a wide range of interests, and I enjoy being versatile, whether
+                it’s building something, experimenting with ideas, or picking up
+                a new hobby.
               </p>
             </div>
             <div className="rounded-2xl border border-[#D4C7B4]/25 bg-[#D4C7B4]/8 p-5">
-              <p className="text-[10px] uppercase tracking-[0.14em] text-[#D4C7B4]/70 poppins-semibold">
-                Projects
+              <p className="mt-2 text-sm  poppins-regular text-[#f7f2e9]">
+                I also genuinely enjoy being part of a team or building one.
+                There’s something about improving a team’s efficiency and seeing
+                things work better that I really like. At the same time, I have
+                a strong eye for detail and user experience, and I tend to be a
+                bit of a perfectionist when it comes to the things I create.
+                <br />
+                <br />
+                What I enjoy the most, though, is that moment after finishing
+                something. Stepping back and looking at what I built, realizing
+                “I actually did this.” That feeling of being capable, of turning
+                an idea into something real, is what drives me. Whether it’s
+                coding a project or working on my car, I just enjoy figuring
+                things out and solving problems.
               </p>
-              <p className="mt-2 text-3xl font-kalnia text-[#efe4d3]">10+</p>
-            </div>
-            <div className="rounded-2xl border border-[#D4C7B4]/25 bg-[#D4C7B4]/8 p-5">
-              <p className="text-[10px] uppercase tracking-[0.14em] text-[#D4C7B4]/70 poppins-semibold">
-                Experience
-              </p>
-              <p className="mt-2 text-3xl font-kalnia text-[#efe4d3]">3+ yrs</p>
             </div>
           </div>
         </div>
@@ -341,8 +390,8 @@ function About() {
               What I'm Seeking
             </p>
             <h2 className="mt-4 font-kalnia text-3xl text-[#efe4d3] lg:text-4xl">
-              Teams & problems where I can combine technical excellence with
-              product thinking.
+              An internship where I can contribute to real-world projects and
+              learn from a strong team.
             </h2>
             <p className="mt-5 leading-8 text-[#f1e8d9]/85 poppins-regular">
               I’m looking for opportunities where I can grow as a developer
@@ -548,7 +597,7 @@ function About() {
           </div>
         </div>
 
-        {/* Why Work With Me - Feature Cards */}
+        {/* Why Work With Me - Feature Cards
         <section id="what-sets-apart" className="mb-16">
           <h2 className="font-kalnia text-2xl text-[#efe4d3] lg:text-3xl">
             What Sets Me Apart
@@ -591,7 +640,7 @@ function About() {
               </p>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Awards & Certifications */}
         <section id="achievements" className="mb-16">
