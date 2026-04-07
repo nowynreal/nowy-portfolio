@@ -1,5 +1,3 @@
-import React from "react";
-
 function ProjectsItem() {
   return (
     <div className="bg-amber-700 w-full h-auto p-4">
