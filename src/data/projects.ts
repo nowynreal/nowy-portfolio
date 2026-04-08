@@ -36,6 +36,8 @@ export interface Project {
   highlights: string[];
   liveUrl?: string;
   repoUrl?: string;
+  customButtonLabel?: string;
+  customButtonUrl?: string;
   featured?: boolean;
   context: string;
   goal: string;
@@ -64,7 +66,7 @@ export const projects: Project[] = [
       "Mobile-first responsive strategy",
       "Reusable card and section patterns",
     ],
-    liveUrl: "https://nowy-portfolio.vercel.app",
+    liveUrl: "https://semihyucekan.com",
     repoUrl: "https://github.com/nowynreal",
     featured: true,
     context:
@@ -252,63 +254,81 @@ export const projects: Project[] = [
 },
   {
     id: 4,
-    slug: "promptsmith",
-    title: "PromptSmith",
-    tagline: "Prompt workflow utility for dev teams",
+    slug: "spiq",
+    title: "SpIQ",
+    tagline: "AI-powered interview practice with real-time feedback.",
     description:
-      "A lightweight assistant for organizing prompt templates, experiments, and outputs across multiple project contexts.",
-    year: 2025,
+      "A video-based interview training platform that helps users practice speaking, track performance, and receive structured feedback through guided sessions.",
+    year: 2026,
     category: "AI",
     status: "In Progress",
-    progress: 58,
-    team: "Solo",
-    stack: ["TypeScript", "Express", "SQLite"],
+    progress: 68,
+    team: "Team",
+    stack: ["React", "TypeScript", "TailwindCSS", "Flask", "OpenAI API"],
     highlights: [
-      "Template version tracking",
-      "Searchable run history",
-      "Prompt quality score heuristics",
+      "Segmented interview practice sessions",
+      "Transcript + visual feedback system",
+      "Performance tracking across sessions",
     ],
-    repoUrl: "https://github.com/nowynreal",
+    // liveUrl: "SOON",
+    customButtonLabel: "READ MORE",
+    customButtonUrl:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7425804951089528832/?originTrackingId=tsAhls3rssHTg4FFAOIIoA%3D%3D",
+    // repoUrl: "https://github.com/nowynreal",
     context:
-      "Prompt assets were scattered across docs and chats, causing repeated rework.",
+      "Interview preparation is often unstructured and lacks real feedback, making it difficult for users to improve their speaking and performance effectively.",
     goal:
-      "Centralize templates and experiments with clear quality and reuse indicators.",
+      "Create an AI-powered interview practice platform that provides guided sessions, real-time feedback, and measurable progress tracking.",
     outcome:
-      "Built a searchable prompt library and run-log model for fast team iteration.",
-    metrics: [
-      { label: "Prompt Templates", value: "90+" },
-      { label: "Reuse Rate", value: "63%" },
-      { label: "Run Logs", value: "1.2k" },
-      { label: "Latency", value: "Low" },
+      "Built a working prototype that enables structured interview practice with video recording, transcript analysis, and performance feedback, winning 1st Place and Hackers’ Choice at HackMT.",    metrics: [
+      { label: "Hackathon Rank", value: "1st Place" },
+      { label: "Awards", value: "Hackers’ Choice" },
+      // { label: "", value: "1.2k" },
+      // { label: "Latency", value: "Low" },
     ],
     timeline: [
-      {
-        stage: "Taxonomy",
-        detail: "Mapped prompt categories by domain and intent.",
-      },
-      {
-        stage: "Tracking",
-        detail: "Added run-level scoring and output bookmarking.",
-      },
-      {
-        stage: "Refinement",
-        detail: "Optimizing search relevance and quality score calibration.",
-      },
-    ],
+  {
+    stage: "TRIGGER",
+    detail: "Interview preparation often feels vague and hard to practice alone, especially when feedback is limited. During HackMT, we saw an opportunity to turn mock interviews into structured, actionable feedback.",
+  },
+  {
+    stage: "RESEARCH",
+    detail: "Analyzed common interview prep workflows and identified key gaps: lack of realistic speaking practice, limited feedback, and no clear performance tracking. Defined segmented interview flows and feedback categories.",
+  },
+  {
+    stage: "BUILD",
+    detail: "Designed and developed SpIQ during HackMT using React, TailwindCSS, and Flask. Implemented timed interview segments, recording flow, transcript-based review, and a clean, intuitive interface.",
+  },
+  {
+    stage: "VALIDATION",
+    detail: "Tested the product during the hackathon, refined the UX based on feedback, and delivered a working prototype that won 1st Place and Hackers' Choice.",
+  },
+  {
+    stage: "EVOLUTION",
+    detail: "Currently continuing development by improving feedback accuracy, enhancing UI/UX, and expanding the system into a more complete interview preparation platform.",
+  },
+],
     media: [
       {
-        id: "promptsmith-image",
+        id: "spiq-image-1",
         type: "image",
-        src: "",
-        title: "Template Workspace",
-        caption: "Prompt list, scoring and run history view.",
+        src: new URL("../assets/spiq-image-1.png", import.meta.url).href,
+        title: "Session Interface",
+        caption: "A guided interview experience designed to simulate real-world practice. Users move through structured prompts with built-in timing, recording their responses in a focused, distraction-free environment. Each session is segmented into clear stages, allowing users to concentrate on one response at a time while maintaining a natural interview flow. The interface emphasizes simplicity and clarity, helping users stay engaged without overthinking the process.The goal is to make practice feel intentional and repeatable — not just answering questions, but building consistency in delivery, pacing, and confidence across sessions.",
       },
       {
-        id: "promptsmith-gif",
+        id: "spiq-image-2",
         type: "gif",
-        src: "",
-        title: "Run Flow GIF",
-        caption: "Use GIF captures to show output generation flow.",
+        src: new URL("../assets/spiq-image-2.png", import.meta.url).href,        
+        title: "Results Interface",
+        caption: "A feedback-driven interface that combines video playback, transcript analysis, and scoring to help users understand and improve their performance over time. Designed to turn subjective performance into structured, trackable data.",
+      },
+      {
+        id: "spiq-image-3",
+        type: "image",
+        src: new URL("../assets/spiq-image-3.png", import.meta.url).href,        
+        title: "Pricing Page Concept",
+        caption: "",
       },
     ],
   },

@@ -362,6 +362,17 @@ function Projects() {
                         <FaArrowUpRightFromSquare className="text-[11px]" />
                       </a>
                     )}
+                    {project.customButtonLabel && project.customButtonUrl && (
+                      <a
+                        href={project.customButtonUrl}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="inline-flex items-center gap-2 rounded-xl border border-[#D7850C]/40 bg-[#D7850C]/16 px-3 py-2 text-xs uppercase tracking-[0.1em] text-[#f7f2e9] transition hover:bg-[#D7850C]/26 poppins-semibold"
+                      >
+                        {project.customButtonLabel}
+                        <FaArrowUpRightFromSquare className="text-[11px]" />
+                      </a>
+                    )}
                     {project.repoUrl && (
                       <a
                         href={project.repoUrl}
