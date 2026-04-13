@@ -154,7 +154,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 1,
+    id: 2,
     slug: "nowy-portfolio",
     title: "Portfolio",
     tagline: "Personal brand experience with modular architecture",
@@ -228,7 +228,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     slug: "berc-library",
     title: "BERC Digital Library",
     tagline: "Transform your research archives into a discoverable digital experience.",
@@ -291,7 +291,7 @@ export const projects: Project[] = [
     ],
   },
   {
-  id: 3,
+  id: 4,
   slug: "subtitle-studio",
   title: "Subtitle Studio",
   tagline: "Generate, edit, and style subtitles locally with live preview.",
@@ -358,7 +358,7 @@ export const projects: Project[] = [
   ],
 },
   {
-    id: 4,
+    id: 5,
     slug: "spiq",
     title: "SpIQ",
     tagline: "AI-powered interview practice with real-time feedback.",
@@ -438,7 +438,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     slug: "palm-reader",
     title: "Palm Reader App",
     tagline: "AI-powered palm reading and personality insights",
@@ -506,7 +506,7 @@ outcome:
       ],
   },
   {
-    id: 6,
+    id: 7,
     slug: "transcript-article-automation",
     title: "Transcript Article Automation",
     tagline: "Turning raw transcripts into structured, publishable research content",
