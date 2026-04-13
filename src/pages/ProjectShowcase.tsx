@@ -211,7 +211,7 @@ function ProjectShowcase() {
                       <img
                         src={heroMedia.src}
                         alt={heroMedia.title}
-                        className="h-full w-full object-cover"
+                        className="h-full w-full bg-[#0f0f0f] object-contain"
                         loading="lazy"
                       />
                     )}
@@ -249,7 +249,7 @@ function ProjectShowcase() {
                           <img
                             src={media.src}
                             alt={media.title}
-                            className="h-full w-full object-cover"
+                            className="h-full w-full bg-[#0f0f0f] object-contain"
                             loading="lazy"
                           />
                         )}
@@ -266,8 +266,8 @@ function ProjectShowcase() {
                   ))
                 ) : (
                   <div className="rounded-2xl border border-dashed border-[#D4C7B4]/30 bg-[#D4C7B4]/5 p-4 text-sm text-[#f1e8d9]/70 poppins-regular">
-                    Add more screenshots, GIFs or videos to enrich this
-                    showcase.
+                    No media available for this project yet. Check back later
+                    for updates!
                   </div>
                 )}
               </div>

@@ -2,6 +2,7 @@ import NavbarAlt from "../components/NavBarAlt";
 import Footer from "../components/Footer";
 import about_me_bg from "../assets/about_me_bg.png";
 import { useState, useEffect } from "react";
+import { FaLinkedin } from "react-icons/fa";
 
 const ROTATING_ROLES = [
   "developer.",
@@ -165,27 +166,37 @@ function About() {
     {
       type: "Hackathon",
       title: "Hackathon Winner",
-      organization: "XYZ Hackathon 2024",
-      date: "2024",
-      description: "1st place in web development track",
+      organization: "HackMT 2026",
+      date: "2026",
+      description: "1st place",
       icon: "🏆",
     },
     {
-      type: "Certification",
-      title: "Advanced React Mastery",
-      organization: "Udemy",
-      date: "2023",
-      description: "Comprehensive React and TypeScript certification",
-      icon: "📜",
+      type: "Hackathon",
+      title: "Hacker's Choice Award",
+      organization: "HackMT 2026",
+      date: "2026",
+      description:
+        "Awarded for SpIQ, a project focused on improving interview and communication skills through real-time feedback.",
+      icon: "🏅",
     },
     {
       type: "Certification",
-      title: "Full-Stack Web Development",
-      organization: "Online Course",
-      date: "2022",
-      description: "Complete full-stack development course",
+      title: "CS50x: Introduction to Computer Science",
+      organization: "HarvardX",
+      date: "2023",
+      description:
+        "An entry-level course taught by David J. Malan, CS50x teaches students how to think algorithmically and solve problems efficiently.",
       icon: "📜",
     },
+    // {
+    //   type: "Certification",
+    //   title: "Full-Stack Web Development",
+    //   organization: "Online Course",
+    //   date: "2022",
+    //   description: "Complete full-stack development course",
+    //   icon: "📜",
+    // },
   ];
 
   return (
@@ -473,7 +484,7 @@ function About() {
 
                     <div className="relative mt-4 flex items-center justify-between border-t border-[#f7f2e9]/10 pt-3">
                       <p className="text-[11px] uppercase tracking-[0.14em] text-[#f7f2e9]/45 poppins-semibold">
-                        Related Link
+                        {/* Related Link */}
                       </p>
                       {exp.link ? (
                         <a
@@ -524,27 +535,30 @@ function About() {
         {/* Tech Stack - Clean Bento */}
         <div id="tech-stack" className="mb-16">
           <h2 className="font-kalnia text-2xl text-[#efe4d3] lg:text-3xl">
-            Building With
+            Toolbox
           </h2>
-          <p className="mt-3 max-w-3xl text-sm leading-7 text-[#f2e9da]/80 poppins-regular">
+          {/* <p className="mt-3 max-w-3xl text-sm leading-7 text-[#f2e9da]/80 poppins-regular">
             The stack I use most, in a cleaner quick-scan layout.
-          </p>
+          </p> */}
 
           <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5">
             <div className="rounded-3xl border border-[#69D8B6]/28 bg-gradient-to-br from-[#69D8B6]/10 via-[#131313]/84 to-[#131313]/72 p-6 backdrop-blur-sm md:col-span-2">
               <p className="text-xs uppercase tracking-[0.16em] text-[#c9ffee] poppins-semibold">
-                Core Engineering Stack
+                Main Stack
               </p>
               <div className="mt-4 flex flex-wrap gap-2.5">
                 {[
                   "TypeScript",
-                  "JavaScript",
                   "React",
+                  "React Native",
                   "Tailwind CSS",
                   "Vite",
+                  "Node.js",
                   "REST API",
                   "Python",
-                  "SQL",
+                  "HTML",
+                  "CSS",
+                  "C++",
                 ].map((item) => (
                   <span
                     key={item}
@@ -558,18 +572,22 @@ function About() {
 
             <div className="rounded-3xl border border-[#D7850C]/26 bg-gradient-to-br from-[#D7850C]/10 via-[#131313]/84 to-[#131313]/72 p-6 backdrop-blur-sm">
               <p className="text-xs uppercase tracking-[0.16em] text-[#f7c98a] poppins-semibold">
-                Tools & Programs
+                Tools
               </p>
               <div className="mt-4 grid grid-cols-2 gap-2 text-sm text-[#f7f2e9]/90 poppins-medium">
                 <span className="rounded-xl bg-[#f7f2e9]/6 px-3 py-2">Git</span>
                 <span className="rounded-xl bg-[#f7f2e9]/6 px-3 py-2">
-                  GitHub
+                  GitHub & GitHub Actions
                 </span>
+                <span className="rounded-xl bg-[#f7f2e9]/6 px-3 py-2">
+                  Docker
+                </span>
+                <span className="rounded-xl bg-[#f7f2e9]/6 px-3 py-2">n8n</span>
                 <span className="rounded-xl bg-[#f7f2e9]/6 px-3 py-2">
                   VS Code
                 </span>
                 <span className="rounded-xl bg-[#f7f2e9]/6 px-3 py-2">
-                  Postman
+                  Expo
                 </span>
                 <span className="rounded-xl bg-[#f7f2e9]/6 px-3 py-2">
                   Figma
@@ -585,14 +603,14 @@ function About() {
                 Workflow & Skills
               </p>
               <ul className="mt-4 space-y-2.5 text-sm text-[#f7f2e9]/86 poppins-regular">
-                <li>Product-focused development</li>
-                <li>Clean and maintainable code</li>
-                <li>Cross-team communication</li>
-                <li>Fast iteration and ownership</li>
+                <li>I build with product mindset</li>
+                <li>I take ownership and care about doing things right</li>
+                <li>I’m naturally curious and enjoy exploring new ideas</li>
+                <li>I enjoy working in teams and making them more effective</li>
+                <li>
+                  I pay attention to detail and care about how things feel
+                </li>
               </ul>
-              <p className="mt-4 text-xs uppercase tracking-[0.14em] text-[#D4C7B4]/70 poppins-semibold">
-                Current Focus: Next.js, Backend, Testing, CI/CD
-              </p>
             </div>
           </div>
         </div>
@@ -679,11 +697,11 @@ function About() {
         <section className="rounded-3xl border border-[#D4C7B4]/30 bg-gradient-to-r from-[#D4C7B4]/14 via-[#D7850C]/8 to-[#D4C7B4]/10 p-8 backdrop-blur-sm md:p-12">
           <div className="max-w-2xl">
             <h2 className="font-kalnia text-3xl text-[#efe4d3] lg:text-4xl">
-              Let's build something that matters.
+              Let's build something real.
             </h2>
             <p className="mt-4 leading-7 text-[#f1e8d9]/85 poppins-regular">
-              Collaboration, projects, or just a chat about product &
-              engineering—I'm here for it.
+              Looking for an internship where I can contribute, learn, and grow
+              through real projects.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a
@@ -691,6 +709,15 @@ function About() {
                 className="rounded-xl border border-[#D4C7B4]/35 bg-[#D4C7B4]/90 px-6 py-3 text-sm uppercase tracking-[0.14em] text-[#1d1d1d] poppins-bold transition hover:bg-[#efe4d3]"
               >
                 Start Conversation
+              </a>
+              <a
+                href="https://www.linkedin.com/in/semihyckn/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl border border-[#D4C7B4]/35 bg-transparent px-6 py-3 text-sm uppercase tracking-[0.14em] text-[#efe4d3] poppins-bold transition hover:border-[#D7850C]/55 hover:bg-[#D7850C]/15"
+              >
+                <FaLinkedin className="text-base" aria-hidden="true" />
+                Connect
               </a>
             </div>
           </div>

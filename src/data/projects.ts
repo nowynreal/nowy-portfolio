@@ -50,8 +50,113 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    slug: "nowy-portfolio-v3",
-    title: "Nowy Portfolio v3",
+    slug: "daily-brifer",
+    title: "BERC Daily Briefer",
+    tagline: "Automated economic intelligence & daily reporting system",
+    description:
+      "A fully automated pipeline that collects, analyzes, and delivers daily economic insights for Middle Tennessee. The system transforms raw macroeconomic data into structured signals and distributes them through a reliable reporting workflow.",
+    year: 2026,
+    category: "Automation",
+    status: "In Progress",
+    progress: 70,
+    team: "Solo",
+    stack: [
+    "Python",
+    "GitHub Actions",
+    "HTML/CSS",
+    "SMTP",
+  ],
+    highlights: [
+    "End-to-end automated daily reporting pipeline",
+    "Rule-based economic risk scoring system",
+    "Scheduled CI/CD workflow with GitHub Actions",
+    "Zero-cost infrastructure using GitHub Pages",
+    "Dynamic email delivery with generated reports",
+    "Custom signal classification (Stable / Moderate / Elevated)"
+  ],
+    liveUrl: "https://nowynreal.github.io/daily-brief/index.html",
+    repoUrl: "https://github.com/nowynreal/daily-brief",
+    featured: true,
+    context:
+    "The Business and Economic Research Center (BERC) needed a consistent and scalable way to monitor key economic indicators and produce daily insights without relying on manual reporting workflows.",
+
+  goal:
+    "Design and implement a fully automated system that collects economic data, evaluates risk signals, generates readable summaries, and distributes them daily with minimal operational cost.",
+
+  outcome:
+    "Delivered a production-ready data system that runs daily without human intervention. The pipeline continuously transforms raw economic indicators into structured insights and distributes them through a streamlined reporting and email delivery process.",
+    metrics: [
+    { label: "Automation", value: "100%" },
+    { label: "Execution", value: "Daily (Scheduled)" },
+    { label: "Manual Work Reduced", value: "100%" },
+    { label: "Infrastructure Cost", value: "$0" },
+  ],
+    timeline: [
+  {
+    stage: "Problem Discovery",
+    detail:
+      "Identified inefficiencies in manual economic reporting and the lack of a consistent daily briefing system.",
+  },
+  {
+    stage: "Data Collection",
+    detail:
+      "Integrated external data sources to collect daily economic indicators relevant to Tennessee and the U.S.",
+  },
+  {
+    stage: "Signal Detection",
+    detail:
+      "Designed a rule-based scoring system to flag abnormal economic movements and classify overall risk levels.",
+  },
+  {
+    stage: "Report Generation",
+    detail:
+      "Generated structured daily briefs by converting processed data and signals into readable summaries and HTML reports.",
+  },
+  {
+    stage: "Automation",
+    detail:
+      "Implemented scheduled execution using GitHub Actions to run the pipeline daily without manual intervention.",
+  },
+  {
+    stage: "Delivery",
+    detail:
+      "Built an email delivery system to distribute daily briefs with dynamic content and hosted review pages.",
+  },
+  {
+    stage: "Iteration",
+    detail:
+      "Continuously refined signal thresholds, improved formatting, and optimized pipeline reliability.",
+  },
+],
+    media: [
+      {
+        id: "dailybriefer-image-2",
+        type: "gif",
+        src: new URL("../assets/dailybriefer-image-2.gif", import.meta.url).href,
+        title: "Desktop Briefing Preview",
+        caption: "A structured view of daily economic signals, designed for fast scanning and decision-making. Each card highlights key indicators, trends, and risk signals in a clean hierarchy.",
+      },
+      {
+        id: "dailybriefer-image-1",
+        type: "image",
+        src: new URL("../assets/dailybriefer-image-1.png", import.meta.url).href,
+        title: "Main Menu Dashboard",
+        caption:
+          "A central dashboard for reviewing generated briefs, monitoring signal trends, and accessing historical reports. The interface provides a clear overview of recent economic movements and allows users to dive into detailed insights with ease.",
+      },
+      {
+        id: "dailybriefer-image-3",
+        type: "image",
+        src: new URL("../assets/dailybriefer-image-3.png", import.meta.url).href,
+        title: "Automated Delivery",
+        caption: "Daily briefs are generated and delivered via email with zero manual intervention, ensuring consistent and reliable reporting every morning.",
+      },
+    ],
+  },
+  {
+    id: 1,
+    slug: "nowy-portfolio",
+    title: "Portfolio",
     tagline: "Personal brand experience with modular architecture",
     description:
       "A fast portfolio crafted with reusable layout primitives, bold editorial sections, and intentional motion for smooth browsing.",
@@ -318,8 +423,8 @@ export const projects: Project[] = [
       },
       {
         id: "spiq-image-2",
-        type: "gif",
-        src: new URL("../assets/spiq-image-2.png", import.meta.url).href,        
+        type: "image",
+        src: new URL("../assets/spiq-image-2.png", import.meta.url).href,
         title: "Results Interface",
         caption: "A feedback-driven interface that combines video playback, transcript analysis, and scoring to help users understand and improve their performance over time. Designed to turn subjective performance into structured, trackable data.",
       },
@@ -334,119 +439,141 @@ export const projects: Project[] = [
   },
   {
     id: 5,
-    slug: "autoflow-scripts",
-    title: "AutoFlow Scripts",
-    tagline: "Automation recipes for repetitive workflows",
+    slug: "palm-reader",
+    title: "Palm Reader App",
+    tagline: "AI-powered palm reading and personality insights",
     description:
-      "Set of automation scripts that remove repetitive daily operations in reporting, file handling, and notification pipelines.",
-    year: 2024,
-    category: "Automation",
-    status: "Live",
-    progress: 100,
-    team: "Solo",
-    stack: ["Python", "PowerShell", "GitHub Actions"],
+      "A mobile application that analyzes palm images and generates personalized readings using AI, combining image processing with interpretive insights.",
+    year: 2026,
+    category: "AI",
+    status: "In Progress",
+    progress: 82,
+    team: "Team",
+    stack: ["React Native", "Expo", "Python", "AI APIs"],
     highlights: [
-      "Cron-based routine triggers",
-      "CLI-first workflow design",
-      "Error reporting with retries",
-    ],
-    repoUrl: "https://github.com/nowynreal",
+  "Palm image processing and analysis",
+  "AI-generated personalized readings",
+  "Multi-profile support system",
+],
+    // repoUrl: "https://github.com/nowynreal",
     context:
-      "Manual report prep and repetitive file operations created avoidable daily overhead.",
-    goal:
-      "Automate recurring operations and provide auditable logs for each run.",
-    outcome:
-      "Shipped practical scripts that reduced repetitive manual effort across ops tasks.",
+  "Many apps in this space feel limited either in depth, consistency, or overall product experience. I wanted to explore how a stronger product, better design, and more structured interpretation could create something more engaging.",
+
+goal:
+  "Build an AI-powered mobile app that offers palm-based interpretations, personality insights, and related systems such as numerology in a more polished and structured experience.",
+
+outcome:
+  "The project is currently in development, with work focused on shaping the product experience, improving interpretation quality, and building the technical foundation for image analysis and insight generation.",
     metrics: [
-      { label: "Tasks Automated", value: "16" },
-      { label: "Weekly Hours Saved", value: "11h" },
-      { label: "Retry Coverage", value: "100%" },
-      { label: "Maintainers", value: "3" },
+      { label: "Platform", value: "Mobile" },
+      { label: "Data Contributers", value: "44" },
+      { label: "Status", value: "Collecting Data" },
     ],
     timeline: [
-      {
-        stage: "Map",
-        detail: "Identified high-frequency operations with low decision complexity.",
-      },
-      {
-        stage: "Automate",
-        detail: "Added script runners, argument safety checks, and logging.",
-      },
-      {
-        stage: "Harden",
-        detail: "Introduced fallback retries and lightweight monitoring alerts.",
-      },
-    ],
+  {
+    stage: "Concept",
+    detail: "Defined core idea, user flow, and feature set for palm reading experience.",
+  },
+  {
+    stage: "Design",
+    detail: "Designed mobile UI/UX and structured the app flow and interactions.",
+  },
+  {
+    stage: "Data",
+    detail: "Collected and prepared palm image data to support model training and improve analysis accuracy.",
+  },
+  {
+    stage: "Build",
+    detail: "Developing image processing, AI integration, and backend systems.",
+  },
+],
     media: [
       {
-        id: "autoflow-image",
+        id: "palmreader-image-1",
         type: "image",
-        src: "",
-        title: "Automation Control Panel",
-        caption: "Execution snapshots and run-status summaries.",
+        src: new URL("../assets/palmreader-image-1.png", import.meta.url).href, 
+        title: "Main User Interface",
+        caption: "A user profile selection at the top, along with a credit balance display and an option to add more credits. The main screen features a clear call-to-action button to start a palm reading.",
       },
-    ],
+      {
+        id: "palmreader-image-2",
+        type: "image",
+        src: new URL("../assets/palmreader-image-2.png", import.meta.url).href,
+        title: "Reading Results Concept",
+        caption: "The results screen is to present the generated reading in a visually engaging way, with clear sections for different insights and interpretations based on the user's palm analysis.",
+      },
+      
+      ],
   },
   {
     id: 6,
-    slug: "campus-connect",
-    title: "Campus Connect",
-    tagline: "Student event and resource mobile prototype",
+    slug: "transcript-article-automation",
+    title: "Transcript Article Automation",
+    tagline: "Turning raw transcripts into structured, publishable research content",
     description:
-      "A concept app to help students discover events, connect clubs, and access campus resources in one place.",
-    year: 2024,
-    category: "Frontend",
+      "An automation system that transforms raw transcripts into structured, readable articles using AI-powered processing and custom formatting pipelines.",
+    year: 2026,
+    category: "Automation",
     status: "Concept",
-    progress: 34,
-    team: "Team",
-    stack: ["React Native", "Expo", "Firebase"],
+    progress: 10,
+    team: "Solo",
+    stack: ["Python", "OpenAI API", "n8n", "Markdown", "GitHub Actions"],
     highlights: [
-      "Prototype-ready interaction flow",
-      "Community event recommendation",
-      "Role-specific onboarding paths",
-    ],
-    repoUrl: "https://github.com/nowynreal",
+  "End-to-end transcript → article generation pipeline",
+  "Human-in-the-loop system for collecting high-quality training data",
+  "Custom prompt engineering for consistent, structured outputs",
+  "Automated formatting into publication-ready research articles",
+  "Designed for scalability with cost-aware AI usage",
+],
+    // repoUrl: "https://github.com/nowynreal",
     context:
-      "Students needed a single app for discoverability, events, and practical campus resources.",
+      "At BERC, transcripts from interviews, forums, and research discussions require manual conversion into structured written content. This process is time-consuming, repetitive, and inconsistent.",
     goal:
-      "Prototype a social utility experience that can scale from concept to pilot rollout.",
+      "Build a system that converts transcripts into clean, structured, and publishable articles while minimizing manual editing and maintaining content quality.",
     outcome:
-      "Created the IA and flow prototypes, now preparing for validation interviews.",
+      "Developed a working pipeline that processes transcripts, extracts key ideas, and formats them into article-ready outputs. The system significantly reduces manual workload and standardizes content structure.",
     metrics: [
-      { label: "Core Flows", value: "5" },
-      { label: "Prototype Screens", value: "38" },
-      { label: "Validation", value: "Pending" },
-      { label: "Design State", value: "Concept" },
+      { label: "Manual Work Reduction", value: "90%" },
+      { label: "Status", value: "System Design" },
+
     ],
     timeline: [
       {
-        stage: "Framing",
-        detail: "Mapped event, club, and resource use cases by student journeys.",
+        stage: "Problem Discovery",
+        detail: "Identified inefficiencies in converting transcripts into written content.",
       },
       {
-        stage: "Prototype",
-        detail: "Built key mobile flows with role-aware navigation states.",
+        stage: "System Design",
+        detail: "Designed a pipeline combining AI processing, prompt structuring, and formatting layers to generate article-ready outputs.",
       },
       {
-        stage: "Test Plan",
-        detail: "Scheduling user interviews and prioritizing usability checkpoints.",
+        stage: "Implementation",
+        detail: "Built automation workflows that process transcripts and generate article-ready outputs.",
+    },   {
+        stage: "Training Loop",
+        detail: "Integrated human-reviewed outputs into a dataset for future model fine-tuning and prompt improvement.",
       },
+      {
+      stage: "Optimization",
+      detail:
+        "Improving output quality, reducing token costs, and preparing for scalable deployment.",
+    },
     ],
     media: [
-      {
-        id: "campus-image-1",
-        type: "image",
-        src: "",
-        title: "Mobile Feed Concept",
-        caption: "Event feed and contextual recommendation blocks.",
-      },
-      {
-        id: "campus-image-2",
-        type: "image",
-        src: "",
-        title: "Resource Hub",
-        caption: "Academic and social resources grouped by urgency and type.",
-      },
+      // {
+      //   id: "articleautomation-image-1",
+      //   type: "image",
+      //   src: "",
+      //   title: "Mobile Feed Concept",
+      //   caption: "Event feed and contextual recommendation blocks.",
+      // },
+      // {
+      //   id: "articleautomation-image-2",
+      //   type: "image",
+      //   src: "",
+      //   title: "Resource Hub",
+      //   caption: "",
+      // },
     ],
   },
 ];

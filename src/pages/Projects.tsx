@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, type KeyboardEvent, type MouseEvent } from "react";
 import {
   FaArrowRight,
   FaArrowUpRightFromSquare,
@@ -12,7 +12,7 @@ import {
   FaRocket,
   FaSliders,
 } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import NavbarAlt from "../components/NavBarAlt";
 import {
@@ -25,6 +25,7 @@ import {
 } from "../data/projects";
 
 function Projects() {
+  const navigate = useNavigate();
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState<"All" | ProjectCategory>(
     "All",
@@ -61,6 +62,34 @@ function Projects() {
     (project) => project.status === "In Progress",
   ).length;
 
+  const shouldSkipCardNavigation = (target: EventTarget | null) => {
+    if (!(target instanceof HTMLElement)) {
+      return false;
+    }
+
+    return Boolean(target.closest("a, button, input, textarea, select"));
+  };
+
+  const handleCardClick = (event: MouseEvent<HTMLElement>, slug: string) => {
+    if (shouldSkipCardNavigation(event.target)) {
+      return;
+    }
+
+    navigate(`/projects/${slug}`);
+  };
+
+  const handleCardKeyDown = (
+    event: KeyboardEvent<HTMLElement>,
+    slug: string,
+  ) => {
+    if (event.key !== "Enter" && event.key !== " ") {
+      return;
+    }
+
+    event.preventDefault();
+    navigate(`/projects/${slug}`);
+  };
+
   return (
     <div className="relative min-h-screen bg-[#1d1d1d] text-[#f7f2e9]">
       <div className="pointer-events-none absolute inset-0">
@@ -87,9 +116,9 @@ function Projects() {
                   Product Thinking
                 </h1>
                 <p className="mt-3 max-w-2xl text-sm leading-6 text-[#f1e8d9]/80 poppins-regular sm:text-base">
-                  A selection of shipped and in-progress work designed with
+                  {/* A selection of shipped and in-progress work designed with
                   clear information hierarchy, performance focus, and practical
-                  user flows.
+                  user flows. */}
                 </p>
               </div>
 
@@ -190,7 +219,18 @@ function Projects() {
 
           <section className="mt-3 space-y-3 sm:mt-4 sm:space-y-4">
             {featuredProject && (
-              <article className="group relative overflow-hidden rounded-3xl border border-[#D4C7B4]/25 bg-gradient-to-br from-[#D4C7B4]/12 via-[#1b1b1b]/92 to-[#111111]/95 p-4 transition duration-300 hover:border-[#D4C7B4]/45 sm:p-6">
+              <article
+                role="link"
+                tabIndex={0}
+                aria-label={`Open ${featuredProject.title} showcase`}
+                onClick={(event) =>
+                  handleCardClick(event, featuredProject.slug)
+                }
+                onKeyDown={(event) =>
+                  handleCardKeyDown(event, featuredProject.slug)
+                }
+                className="group relative cursor-pointer overflow-hidden rounded-3xl border border-[#D4C7B4]/25 bg-gradient-to-br from-[#D4C7B4]/12 via-[#1b1b1b]/92 to-[#111111]/95 p-4 transition duration-300 hover:border-[#D4C7B4]/45 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4C7B4]/55 sm:p-6"
+              >
                 <div className="pointer-events-none absolute -right-12 -top-16 h-40 w-40 rounded-full bg-[#D4C7B4]/15 blur-3xl" />
 
                 <div className="relative flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
@@ -279,7 +319,12 @@ function Projects() {
               {otherProjects.map((project) => (
                 <article
                   key={project.id}
-                  className="group relative overflow-hidden rounded-3xl border border-[#D4C7B4]/20 bg-[#131313]/85 p-4 transition duration-300 hover:-translate-y-0.5 hover:border-[#D4C7B4]/45 hover:shadow-[0_12px_34px_rgba(212,199,180,0.12)] sm:p-5"
+                  role="link"
+                  tabIndex={0}
+                  aria-label={`Open ${project.title} showcase`}
+                  onClick={(event) => handleCardClick(event, project.slug)}
+                  onKeyDown={(event) => handleCardKeyDown(event, project.slug)}
+                  className="group relative cursor-pointer overflow-hidden rounded-3xl border border-[#D4C7B4]/20 bg-[#131313]/85 p-4 transition duration-300 hover:-translate-y-0.5 hover:border-[#D4C7B4]/45 hover:shadow-[0_12px_34px_rgba(212,199,180,0.12)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4C7B4]/55 sm:p-5"
                 >
                   <div className="pointer-events-none absolute -right-6 -top-7 text-[#D4C7B4]/15 blur-[1px]">
                     <FaLayerGroup className="text-[66px]" />
