@@ -20,18 +20,12 @@ function MobileHomeLayout() {
   return (
     <div className="flex flex-col gap-3">
       <section className="rounded-3xl border border-[#D4C7B4]/20 bg-gradient-to-b from-[#D4C7B4]/10 to-[#1d1d1d]/90 p-4">
-        <p className="text-xs uppercase tracking-[0.18em] text-[#D4C7B4] poppins-semibold">
-          Snapshot
+        <p className="poppins-semibold text-xs uppercase tracking-[0.18em] text-[#D4C7B4]">
+          Middle Tennessee State University
         </p>
-        <h1 className="mt-3 font-kalnia text-4xl leading-tight text-[#efe4d3]">
-          Building things
-          <br />
-          that just work.
+        <h1 className="mt-1 font-kalnia text-2xl text-[#D4C7B4] leading-tight sm:text-[2rem]">
+          Computer Science '28
         </h1>
-        <p className="mt-3 text-sm leading-6 text-[#f1e8d9]/80 poppins-regular">
-          I focus on clean UI, practical features, and making things easy to
-          use.
-        </p>
       </section>
 
       <section className="grid grid-cols-2 gap-3">

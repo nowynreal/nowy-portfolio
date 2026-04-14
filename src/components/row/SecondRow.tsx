@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import nashvilleImage from "../../assets/nashville.png";
 
 function SecondRow() {
   return (
     <div className="flex w-full flex-[2] min-h-[220px] gap-4 lg:min-h-0 lg:gap-0">
-      <div className="relative flex flex-[1] flex-col justify-between bg-[#D4C7B4] p-4 text-[#1d1d1d] sm:p-5 lg:mb-4 lg:rounded-b-3xl lg:rounded-tl-none">
+      <div className="relative  flex flex-[1] flex-col justify-between bg-[#D4C7B4] p-4 text-[#1d1d1d] sm:p-5 lg:mb-4 lg:rounded-b-3xl lg:rounded-tl-none">
         <div className="pointer-events-none absolute -right-5 top-0 z-[1] hidden h-5 w-5 rounded-tl-[28px] bg-[#1d1d1d] lg:block" />
         <div className="pointer-events-none absolute -right-5 top-0 hidden h-5 w-5 bg-[#D4C7B4] lg:block" />
 
@@ -43,9 +44,9 @@ function SecondRow() {
           </Link>
         </div>
 
-        <p className="mt-4 max-w-[44ch] text-sm leading-6 text-[#1d1d1d]/85 poppins-regular sm:text-base">
-          edit later
-        </p>
+        <div>
+          <img className="mt-1" src={nashvilleImage} alt="Nashville" />
+        </div>
       </div>
       <Link
         to="/projects"

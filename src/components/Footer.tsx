@@ -16,7 +16,7 @@ function Footer({ compact = false }: FooterProps) {
         <div>
           <p className="font-kalnia text-xl text-[#efe4d3]">Semih YUCEKAN</p>
           <p className={`${textSize} text-[#D4C7B4]/80 poppins-regular`}>
-            Building clean products with strong UX and practical systems.
+            Every day learner in embracing the art of the possible.
           </p>
         </div>
 
