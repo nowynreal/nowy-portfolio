@@ -168,7 +168,7 @@ function About() {
       title: "Hackathon Winner",
       organization: "HackMT 2026",
       date: "2026",
-      description: "1st place",
+      description: "1st place with project SpIQ.",
       icon: "🏆",
     },
     {
@@ -514,7 +514,7 @@ function About() {
           </div>
 
           {/* Right: Testimonials Vertical Stack */}
-          <div className="flex flex-col gap-4">
+          {/* <div className="flex flex-col gap-4">
             <h3 className="font-kalnia text-xl text-[#efe4d3]">Feedback</h3>
             {testimonials.map((testimonial, i) => (
               <div
@@ -529,7 +529,7 @@ function About() {
                 </p>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Tech Stack - Clean Bento */}

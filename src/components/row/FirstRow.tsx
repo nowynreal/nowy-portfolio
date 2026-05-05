@@ -1,7 +1,7 @@
 function FirstRow() {
   const handleResumeClick = () => {
     window.open(
-      "/src/assets/SemihYucekanResume.pdf",
+      "/src/assets/SemihYucekan_v8.pdf",
       "_blank",
       "noopener,noreferrer",
     );
