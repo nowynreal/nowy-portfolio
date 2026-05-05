@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import nashvilleImage from "../../assets/nashville.png";
+import iconImage from "../../assets/icon.png";
 
 function SecondRow() {
   return (
@@ -40,7 +41,7 @@ function SecondRow() {
               </svg>
             </div>
 
-            <img className="size-16" src="src/assets/icon.png" alt="Hire Me" />
+            <img className="size-16" src={iconImage} alt="Hire Me" />
           </Link>
         </div>
 

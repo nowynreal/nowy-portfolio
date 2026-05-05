@@ -10,11 +10,7 @@ function MobileHomeLayout() {
   const isLive = workingProject?.status === "Live";
 
   const handleResumeClick = () => {
-    window.open(
-      "/src/assets/SemihYucekan_v8.pdf",
-      "_blank",
-      "noopener,noreferrer",
-    );
+    window.open("/SemihYucekan_v8.pdf", "_blank", "noopener,noreferrer");
   };
 
   return (
