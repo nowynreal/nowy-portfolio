@@ -141,26 +141,26 @@ function About() {
     },
   } as const;
 
-  const testimonials = [
-    {
-      quote:
-        "Semih has a rare combination of technical skill and product thinking. He doesn't just build features—he builds experiences.",
-      author: "BERC Research Director",
-      role: "Project Mentor",
-    },
-    {
-      quote:
-        "What impressed me most was how quickly he could iterate from feedback. He genuinely cares about getting the details right.",
-      author: "Team Member",
-      role: "Peer Developer",
-    },
-    {
-      quote:
-        "Great UI instincts. His portfolio and design thinking clearly show he understands how to build things users actually enjoy using.",
-      author: "Fellow Developer",
-      role: "Tech Community",
-    },
-  ];
+  // const testimonials = [
+  //   {
+  //     quote:
+  //       "Semih has a rare combination of technical skill and product thinking. He doesn't just build features—he builds experiences.",
+  //     author: "BERC Research Director",
+  //     role: "Project Mentor",
+  //   },
+  //   {
+  //     quote:
+  //       "What impressed me most was how quickly he could iterate from feedback. He genuinely cares about getting the details right.",
+  //     author: "Team Member",
+  //     role: "Peer Developer",
+  //   },
+  //   {
+  //     quote:
+  //       "Great UI instincts. His portfolio and design thinking clearly show he understands how to build things users actually enjoy using.",
+  //     author: "Fellow Developer",
+  //     role: "Tech Community",
+  //   },
+  // ];
 
   const achievements = [
     {
