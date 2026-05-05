@@ -45,8 +45,8 @@ function SecondRow() {
           </Link>
         </div>
 
-        <div>
-          <img className="mt-1" src={nashvilleImage} alt="Nashville" />
+        <div className="mt-1 w-full">
+          <img className="w-full h-auto" src={nashvilleImage} alt="Nashville" />
         </div>
       </div>
       <Link
