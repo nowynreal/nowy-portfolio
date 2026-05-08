@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import ProjectShowcase from "./pages/ProjectShowcase";
+import NotFound from "./pages/NotFound";
 import LeftBlock from "./components/sections/LeftBlock";
 
 function RouteProgressBar({ routeKey }: { routeKey: string }) {
@@ -57,8 +58,9 @@ function AnimatedRoutes() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:slug" element={<ProjectShowcase />} />
-        <Route path="*" element={<div>404 Not Found</div>} />
+        <Route path="/404" element={<NotFound />} />
         <Route path="/test" element={<LeftBlock />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
