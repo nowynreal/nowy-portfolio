@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import nashvilleImage from "../../assets/nashville.png";
-import iconImage from "../../assets/icon.png";
+import iconImage from "/icon.png";
 
 function SecondRow() {
   return (
